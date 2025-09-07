@@ -53,7 +53,7 @@ export default function Newsletter() {
             type="email"
             required
             placeholder="Enter your email"
-            className="px-5 py-3 rounded-lg text-gray-100 flex-1 min-w-[250px] focus:outline-none"
+            className="px-5 py-3 rounded-lg border text-gray-100 flex-1 min-w-[250px] focus:outline-none"
           />
           <button
             type="submit"
