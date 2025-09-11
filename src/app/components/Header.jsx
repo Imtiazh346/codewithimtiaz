@@ -92,7 +92,7 @@ export default function Header() {
                       <Link
                         key={i}
                         href={child.href}
-                        className="block px-4 py-2 text-foreground hover:text-primary"
+                        className="block px-2 py-2 text-foreground hover:text-primary"
                       >
                         {child.name}
                       </Link>
