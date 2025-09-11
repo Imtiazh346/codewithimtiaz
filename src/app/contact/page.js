@@ -15,7 +15,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-20">
+    <main className="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-20">
       {/* Page Heading */}
       <section className="text-center">
         <h1 className="text-2xl sm:text-5xl font-bold text-heading ">
@@ -125,11 +125,11 @@ export default function ContactPage() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none"
+            className="flex-1 px-4 py-3 rounded-lg border border-white text-gray-900 focus:outline-none"
           />
           <button
             type="submit"
-            className="bg-white text-primary font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
+            className="bg-white text-primary font-semibold placeholder-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors cursor-pointer"
           >
             Subscribe
           </button>
