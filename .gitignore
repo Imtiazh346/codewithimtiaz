@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -128,17 +129,23 @@ dist
 
 # yarn v3
 =======
+=======
+>>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
 /.pnp
+<<<<<<< HEAD
 >>>>>>> be75bd2 (Initial commit from Create Next App)
+=======
+>>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
 .pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
+<<<<<<< HEAD
 <<<<<<< HEAD
 !.yarn/sdks
 !.yarn/versions
@@ -147,6 +154,8 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 =======
+=======
+>>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
 !.yarn/versions
 
 # testing
@@ -178,4 +187,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
 >>>>>>> be75bd2 (Initial commit from Create Next App)
+=======
+>>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387

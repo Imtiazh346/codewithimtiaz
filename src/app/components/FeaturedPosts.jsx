@@ -32,7 +32,11 @@ const posts = [
 
 export default function FeaturedPostsModern() {
   return (
+<<<<<<< HEAD
     <section className="py-10 bg-white dark:bg-gray-950">
+=======
+    <section className="py-20 bg-white dark:bg-gray-950">
+>>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <motion.h2
