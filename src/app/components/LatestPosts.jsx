@@ -50,11 +50,7 @@ const breakpointColumns = {
 
 export default function LatestPosts() {
   return (
-<<<<<<< HEAD
     <section className="max-w-7xl mx-auto px-6 py-10">
-=======
-    <section className="max-w-7xl mx-auto px-6 py-16">
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
       <h2 className="text-3xl font-bold text-heading mb-10 text-center">
         ✨ Latest Posts
       </h2>

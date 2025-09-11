@@ -4,11 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Newsletter() {
   return (
-<<<<<<< HEAD
     <section className="relative bg-gray-300 py-8 text-black overflow-hidden">
-=======
-    <section className="relative bg-gradient-to-r from-primary to-purple-600 py-16 text-white overflow-hidden">
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
       {/* Background Glow */}
       <div className="absolute inset-0">
         <motion.div
@@ -34,11 +30,7 @@ export default function Newsletter() {
           📬 Join Our Newsletter
         </motion.h2>
         <motion.p
-<<<<<<< HEAD
           className="text-lg mb-8 text-black"
-=======
-          className="text-lg mb-8 text-white/90"
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -61,19 +53,11 @@ export default function Newsletter() {
             type="email"
             required
             placeholder="Enter your email"
-<<<<<<< HEAD
             className="px-5 py-3 rounded-lg border text-black flex-1 min-w-[250px] focus:outline-none"
           />
           <button
             type="submit"
             className="bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-heading hover:text-white transition-colors cursor-pointer"
-=======
-            className="border-2 border-gray-400 rounded-md p-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-heading hover:text-white transition-colors cursor-pointer"
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
           >
             Subscribe
           </button>
@@ -81,11 +65,7 @@ export default function Newsletter() {
 
         {/* Disclaimer */}
         <motion.p
-<<<<<<< HEAD
           className="text-sm mt-4 text-black/40"
-=======
-          className="text-sm mt-4 text-white/70"
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.6 }}

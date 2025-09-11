@@ -2,20 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-<<<<<<< HEAD
     <footer className="relative bg-gradient-to-r from-primary to-purple-500 py-12 text-white overflow-hidden">
-=======
-    <footer className="bg-indigo-950 text-white py-12">
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Section */}
         <div>
           <h3 className="text-xl font-bold mb-4">About</h3>
-<<<<<<< HEAD
           <p className="text-white">
-=======
-          <p className="text-gray-300">
->>>>>>> eda8d8f768b0d2927a4390edea15fe668850f387
             CodeWithImtiaz shares tutorials, tips, and guides on Next.js, Shopify, WordPress, HTML, CSS, and website optimization.
           </p>
         </div>
