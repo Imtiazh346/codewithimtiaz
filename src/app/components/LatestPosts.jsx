@@ -10,7 +10,7 @@ const posts = [
     title: "10 Shopify Speed Optimization Tips",
     description: "Boost your Shopify store speed with these proven tips.",
     category: "Shopify",
-    image: "/images/shopify-speed.jpg",
+    image: "https://picsum.photos/id/237/200/300",
   },
   {
     id: 2,
