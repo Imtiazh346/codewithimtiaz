@@ -49,16 +49,19 @@ export default function ContactSection() {
         {/* Social Media Links */}
         <div className="flex-1 flex flex-col items-center lg:items-start justify-center space-y-6">
           <h2 className="text-3xl font-bold text-gray-800">Connect with me</h2>
+          <p className="text-gray-600 hidden lg:block">
+            Follow me on social media and stay updated:
+          </p>
           <div className="flex space-x-4">
             <a
-              href="#"
+              href="https://www.youtube.com/@thecodewithimtiaz"
               target="_blank"
               className="text-[#FF0000] hover:[#CC0000] transition text-2xl"
             >
               <FaYoutube />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/people/Code-with-Imtiaz/61578384899968/"
               target="_blank"
               className="text-[#1877F2] hover:text-[#145DBF] transition text-2xl"
             >
@@ -72,14 +75,14 @@ export default function ContactSection() {
               <FaTwitter />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/dev-imtiaz/"
               target="_blank"
               className="text-[#0A66C2] hover:text-blue-900 transition text-2xl"
             >
               <FaLinkedinIn />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/codewithimtiaz/"
               target="_blank"
               className="text-[#E1306C] hover:text-[#C1275B] transition text-2xl"
             >
