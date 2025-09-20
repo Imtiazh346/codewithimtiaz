@@ -5,8 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 const skills = {
-  Frontend: ["React/Next.js", "HTML5/CSS3", "Tailwind CSS", "JavaScript"],
   CMS: ["Shopify", "WordPress", "Webflow"],
+  Frontend: ["React/Next.js", "HTML5/CSS3", "Tailwind CSS", "JavaScript"],
   DevTools: ["Git", "Figma", "Photoshop", "Canva"],
   MarketingAnalytics: [
     "GA4",
@@ -25,7 +25,7 @@ const skills = {
 };
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState("CMS");
+  const [activeTab, setActiveTab] = useState("Frontend");
 
   return (
     <section className="bg-gray-50 min-h-screen md:min-h-[35rem] xl:min-h-screen flex items-center">

@@ -38,7 +38,7 @@ export default function Header() {
         <span className="cursor-pointer text-heading font-semibold">
           {item.name}
         </span>
-        <div className="absolute left-0 top-full bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
+        <div className="cursor-pointer absolute left-0 top-full bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
           {item.children.map((child, i) => (
             <Link
               key={i}
@@ -58,7 +58,7 @@ export default function Header() {
             .getElementById(item.href.substring(1))
             ?.scrollIntoView({ behavior: "smooth" });
         }}
-        className="text-heading font-semibold hover:text-primary transition-colors"
+        className="text-heading font-semibold hover:text-primary transition-colors cursor-pointer"
       >
         {item.name}
       </button>
@@ -66,7 +66,7 @@ export default function Header() {
       <Link
         key={idx}
         href={item.href}
-        className="text-heading font-semibold hover:text-primary transition-colors"
+        className="text-heading font-semibold hover:text-primary transition-colors cursor-pointer"
       >
         {item.name}
       </Link>
