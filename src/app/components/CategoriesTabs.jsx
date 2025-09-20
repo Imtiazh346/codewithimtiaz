@@ -28,7 +28,7 @@ export default function CategoriesTabs() {
   const [activeTab, setActiveTab] = useState("Shopify");
 
   return (
-    <section className="py-10 bg-background">
+    <section id="blogs" className="py-10 bg-background scroll-mt-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-8">Explore by Category</h2>
 

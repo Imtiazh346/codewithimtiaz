@@ -9,19 +9,17 @@ export default function Header() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    {
-      name: "Blogs",
+    { name: "Projects", href: "#projects" },
+    { name: "Tutorials", href: "#tutorials"},
+    { name: "Blogs", href: "#blogs"},
+    { name: "More",
       href: "#",
-      children: [
-        { name: "Next.js", href: "/nextjs" },
-        { name: "Shopify", href: "/shopify" },
-        { name: "WordPress", href: "/wordpress" },
-        { name: "HTML/CSS", href: "/html-css" },
-        { name: "Speed Optimization", href: "/speed" },
-      ],
-    },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+      children:[
+        {name: "About", href:"/about"},
+        {name: "Contact", href:"/contact"}
+      ]
+    }
+
   ];
 
   return (
@@ -40,7 +38,7 @@ export default function Header() {
                 <span className="cursor-pointer text-heading font-semibold">
                   {item.name}
                 </span>
-                <div className="absolute left-0 top-full mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
+                <div className="absolute left-0 top-full bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
                   {item.children.map((child, i) => (
                     <Link
                       key={i}

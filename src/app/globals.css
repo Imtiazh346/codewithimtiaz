@@ -50,3 +50,7 @@ body {
 main {
   flex: 1; /* expands to take available space */
 }
+
+html {
+  scroll-behavior: smooth;
+}
