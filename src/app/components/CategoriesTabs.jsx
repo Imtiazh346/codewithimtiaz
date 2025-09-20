@@ -78,7 +78,7 @@ export default function CategoriesTabs() {
 
         {/* Show All Button */}
         <div className="mt-10">
-          <Link href={`/category/${activeTab.toLowerCase()}`}>
+          <Link href="/projects">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
