@@ -109,23 +109,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold mb-4">Join Us on This Journey</h2>
-          <p className="mb-6 text-lg">
-            Be part of our story and help us shape the future of tech.
-          </p>
-          <button className="px-8 py-3 rounded-xl bg-white text-blue-600 font-semibold shadow-lg hover:scale-105 transition">
-            Get Started
-          </button>
-        </motion.div>
-      </section>
     </div>
   );
 }
