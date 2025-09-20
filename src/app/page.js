@@ -1,13 +1,14 @@
 "use client";
-import CategoriesTabs from "./components/CategoriesTabs";
-import HeroSection from "./components/HeroSection";
-import Newsletter from "./components/Newsletter";
+
+import Hero from "./components/Hero";
 import ProjectsSection from "./components/ProjectsSection";
 import VideoSection from "./components/VideoSection";
+import CategoriesTabs from "./components/CategoriesTabs";
+import Newsletter from "./components/Newsletter";
 export default function HomePage() {
   return (
     <main>
-      <HeroSection />
+      <Hero />
       <ProjectsSection />
       <VideoSection />
       <CategoriesTabs />

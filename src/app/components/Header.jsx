@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
           CodeWithImtiaz

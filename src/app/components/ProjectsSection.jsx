@@ -42,7 +42,7 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <motion.div
