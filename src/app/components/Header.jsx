@@ -55,7 +55,7 @@ export default function Header() {
         key={idx}
         onClick={() => {
           document
-            .getElementById(item.href.substring(1))
+            .getElementByd(item.href.substring(1))
             ?.scrollIntoView({ behavior: "smooth" });
         }}
         className="text-heading font-semibold hover:text-primary transition-colors cursor-pointer"
