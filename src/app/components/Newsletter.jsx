@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Newsletter() {
   return (
-    <section className="relative bg-gray-300 py-8 text-black overflow-hidden mt-5 sm:mt-10">
+    <section className="relative bg-[#d1d5db] py-8 text-[#374151] overflow-hidden mt-5 sm:mt-10">
       {/* Background Glow */}
       <div className="absolute inset-0">
         <motion.div
@@ -30,7 +30,7 @@ export default function Newsletter() {
           📬 Join Our Newsletter
         </motion.h2>
         <motion.p
-          className="text-lg mb-8 text-black"
+          className="text-lg mb-8 text-[#374151]"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}

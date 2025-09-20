@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-r from-primary to-purple-500 py-12 text-white overflow-hidden">
+    <footer className="relative bg-[#0f172a] py-12 text-slate-300 overflow-hidden font-inter">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Section */}
         <div>
           <h3 className="text-xl font-bold mb-4">About</h3>
-          <p className="text-white">
+          <p>
             CodeWithImtiaz shares tutorials, tips, and guides on Next.js, Shopify, WordPress, HTML, CSS, and website optimization.
           </p>
         </div>
@@ -38,11 +38,12 @@ export default function Footer() {
         {/* Social Links */}
         <div>
           <h3 className="text-xl font-bold mb-4">Follow Me</h3>
-          <div className="flex space-x-4">
+          <div className="flex flex-col space-x-4">
+            <Link href="#" className="hover:text-primary transition">YouTube</Link>
             <Link href="#" className="hover:text-primary transition">Facebook</Link>
-            <Link href="#" className="hover:text-primary transition">Twitter</Link>
             <Link href="#" className="hover:text-primary transition">LinkedIn</Link>
             <Link href="#" className="hover:text-primary transition">GitHub</Link>
+            <Link href="#" className="hover:text-primary transition">Instagram</Link>
           </div>
         </div>
       </div>
