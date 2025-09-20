@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Newsletter() {
   return (
-    <section className="relative bg-gray-300 py-8 text-black overflow-hidden">
+    <section className="relative bg-gray-300 py-8 text-black overflow-hidden mt-5 sm:mt-10">
       {/* Background Glow */}
       <div className="absolute inset-0">
         <motion.div
