@@ -25,7 +25,7 @@ const skills = {
 };
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState("Frontend");
+  const [activeTab, setActiveTab] = useState("CMS");
 
   return (
     <section className="bg-gray-50 min-h-screen md:min-h-[35rem] xl:min-h-screen flex items-center">
