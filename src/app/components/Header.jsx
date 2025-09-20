@@ -24,43 +24,55 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
           CodeWithImtiaz
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 items-center">
-          {navItems.map((item, idx) =>
-            item.children ? (
-              <div key={idx} className="group relative">
-                <span className="cursor-pointer text-heading font-semibold">
-                  {item.name}
-                </span>
-                <div className="absolute left-0 top-full bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
-                  {item.children.map((child, i) => (
-                    <Link
-                      key={i}
-                      href={child.href}
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
-                    >
-                      {child.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ) : (
-              <Link
-                key={idx}
-                href={item.href}
-                className="text-heading font-semibold hover:text-primary transition-colors"
-              >
-                {item.name}
-              </Link>
-            )
-          )}
-        </nav>
+<nav className="hidden md:flex space-x-6 items-center">
+  {navItems.map((item, idx) =>
+    item.children ? (
+      <div key={idx} className="group relative">
+        <span className="cursor-pointer text-heading font-semibold">
+          {item.name}
+        </span>
+        <div className="absolute left-0 top-full bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
+          {item.children.map((child, i) => (
+            <Link
+              key={i}
+              href={child.href}
+              className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+            >
+              {child.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    ) : item.href.startsWith("#") ? (
+      <button
+        key={idx}
+        onClick={() => {
+          document
+            .getElementById(item.href.substring(1))
+            ?.scrollIntoView({ behavior: "smooth" });
+        }}
+        className="text-heading font-semibold hover:text-primary transition-colors"
+      >
+        {item.name}
+      </button>
+    ) : (
+      <Link
+        key={idx}
+        href={item.href}
+        className="text-heading font-semibold hover:text-primary transition-colors"
+      >
+        {item.name}
+      </Link>
+    )
+  )}
+</nav>
 
         {/* Mobile toggle */}
         <button
