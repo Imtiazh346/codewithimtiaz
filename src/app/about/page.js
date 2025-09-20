@@ -1,52 +1,72 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaCode, FaUsers, FaRocket } from "react-icons/fa";
+import { FaShopify, FaWordpressSimple, FaReact } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative flex items-center justify-center h-[70vh] bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center px-6"
-        >
-          <h1 className="text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-lg max-w-2xl mx-auto">
-            We build modern, scalable, and user-friendly solutions with passion
-            and creativity.
-          </p>
-        </motion.div>
-      </section>
-
       {/* Who We Are Section */}
       <section className="py-20 container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
         <motion.img
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-          alt="Team work"
+          alt="Career Journey"
           className="rounded-2xl shadow-lg"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         />
+
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
-          <p className="text-muted-foreground mb-6">
-            We’re a passionate team of developers, designers, and marketers
-            dedicated to creating seamless digital experiences. With years of
-            expertise in modern frameworks, we aim to deliver excellence in
-            everything we do.
+          <h2 className="text-3xl font-bold mb-6">Career Journey</h2>
+
+          <p className="mb-4">
+            🎓 <span className="font-semibold">October 2022:</span> Completed my
+            MSCIT degree and started my professional journey in web development.
           </p>
-          <button className="px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition">
-            Learn More
-          </button>
+
+          <p className="mb-4">
+            💼 <span className="font-semibold">Bizsofttech Internship:</span>{" "}
+            Gained hands-on experience building practical solutions and
+            improving technical skills.
+          </p>
+
+          <p className="mb-4">
+            🛒 <span className="font-semibold">Raaziq International:</span>{" "}
+            Managed Shopify & WordPress projects like{" "}
+            <span className="text-blue-500">Reana.pk</span> and{" "}
+            <span className="text-blue-500">TheBeautyWorld.com.pk</span>,
+            focusing on responsive and optimized e-commerce experiences.
+          </p>
+
+          <p className="mb-4">
+            🚀 Over the past 15 months, contributed to Shopify stores such as{" "}
+            <span className="text-blue-500">Musysic</span>,{" "}
+            <span className="text-blue-500">Firmenity</span>, and{" "}
+            <span className="text-blue-500">WarriorReplicas</span>, enhancing
+            user experience and site performance.
+          </p>
+
+          <p className="mb-6">
+            💻 Additionally, I have experience with{" "}
+            <span className="font-semibold">WordPress</span>,{" "}
+            <span className="font-semibold">React</span>, and{" "}
+            <span className="font-semibold">Next.js</span> projects, expanding
+            my expertise in front-end and full-stack development.
+          </p>
+
+          <a
+            href="https://wa.link/lzffxr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 text-center rounded-xl bg-[#25D366] text-white font-semibold shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+          >
+            WhatsApp
+          </a>
         </motion.div>
       </section>
 
@@ -54,25 +74,25 @@ export default function AboutPage() {
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-6 md:px-12">
           <h2 className="text-3xl font-semibold text-center mb-12">
-            What Drives Us
+            What I Do
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                icon: <FaCode className="text-4xl text-blue-600" />,
-                title: "Innovation",
-                desc: "Pushing boundaries with clean code and creative design.",
-              },
-              {
-                icon: <FaUsers className="text-4xl text-purple-600" />,
-                title: "Collaboration",
-                desc: "Working together to build meaningful experiences.",
-              },
-              {
-                icon: <FaRocket className="text-4xl text-pink-600" />,
-                title: "Growth",
-                desc: "Helping businesses scale with modern digital solutions.",
-              },
+    icon: <FaShopify className="text-4xl text-green-600" />,
+    title: "E-commerce Development",
+    desc: "Building optimized Shopify stores that drive sales and enhance user experience.",
+  },
+  {
+    icon: <FaWordpressSimple className="text-4xl text-blue-600" />,
+    title: "WordPress Expertise",
+    desc: "Creating responsive and functional WordPress websites for diverse projects.",
+  },
+  {
+    icon: <FaReact className="text-4xl text-cyan-500" />,
+    title: "Modern Web Development",
+    desc: "Developing scalable and dynamic applications using React and Next.js.",
+  },
             ].map((card, i) => (
               <motion.div
                 key={i}
