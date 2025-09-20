@@ -1,3 +1,10 @@
+import {
+  FaYoutube,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa";
 import Link from "next/link";
 
 export default function Footer() {
@@ -8,25 +15,34 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4">About</h3>
           <p>
-            CodeWithImtiaz shares tutorials, tips, and guides on Next.js, Shopify, WordPress, HTML, CSS, and website optimization.
+            CodeWithImtiaz shares tutorials, tips, and guides on Next.js,
+            Shopify, WordPress, HTML, CSS, and website optimization.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-          <ul>
-            <li><Link href="/" className="hover:text-primary transition">Home</Link></li>
-            <li><Link href="/about" className="hover:text-primary transition">About</Link></li>
-            <li><Link href="/contact" className="hover:text-primary transition">Contact</Link></li>
-            <li><Link href="/blog" className="hover:text-primary transition">Blog</Link></li>
+          <ul className="space-y-2">
+            <li>
+              <Link href="/" className="hover:text-primary transition">Home</Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-primary transition">About</Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-primary transition">Contact</Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:text-primary transition">Blog</Link>
+            </li>
           </ul>
         </div>
 
         {/* Categories */}
         <div>
           <h3 className="text-xl font-bold mb-4">Categories</h3>
-          <ul>
+          <ul className="space-y-2">
             <li><Link href="/category/shopify" className="hover:text-primary transition">Shopify</Link></li>
             <li><Link href="/category/wordpress" className="hover:text-primary transition">WordPress</Link></li>
             <li><Link href="/category/html" className="hover:text-primary transition">HTML</Link></li>
@@ -38,12 +54,51 @@ export default function Footer() {
         {/* Social Links */}
         <div>
           <h3 className="text-xl font-bold mb-4">Follow Me</h3>
-          <div className="flex flex-col space-x-4">
-            <Link href="#" className="hover:text-primary transition">YouTube</Link>
-            <Link href="#" className="hover:text-primary transition">Facebook</Link>
-            <Link href="#" className="hover:text-primary transition">LinkedIn</Link>
-            <Link href="#" className="hover:text-primary transition">GitHub</Link>
-            <Link href="#" className="hover:text-primary transition">Instagram</Link>
+          <div className="flex flex-col space-y-3">
+            <a
+              href="https://www.youtube.com/@thecodewithimtiaz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-sky-400 transition duration-200"
+            >
+              <FaYoutube className="h-5 w-5" /> YouTube
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61578384899968"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-sky-400 transition duration-200"
+            >
+              <FaFacebookF className="h-5 w-5" /> Facebook
+            </a>
+
+            <a
+              href="https://www.instagram.com/code_with_imtiaz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-sky-400 transition duration-200"
+            >
+              <FaInstagram className="h-5 w-5" /> Instagram
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/dev-imtiaz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-sky-400 transition duration-200"
+            >
+              <FaLinkedinIn className="h-5 w-5" /> LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/Imtiazh346"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-sky-400 transition duration-200"
+            >
+              <FaGithub className="h-5 w-5" /> GitHub
+            </a>
           </div>
         </div>
       </div>
