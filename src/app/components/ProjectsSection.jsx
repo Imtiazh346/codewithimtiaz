@@ -41,7 +41,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-gray-50 scroll-mt-20">
+    <section id="projects" className="py-16 bg-gray-50 scroll-mt-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
@@ -121,12 +121,15 @@ export default function ProjectsSection() {
       {/* Global styles for pagination */}
       <style jsx global>{`
         .swiper-pagination {
-          bottom: 0 !important;
           text-align: center;
+          position: relative;
+          margin-top: 10px;
+          padding-top: 20px;
+          
         }
         .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
+          width: 12px;
+          height: 12px;
           background: #d1d5db;
           opacity: 1;
           margin: 0 4px !important;
