@@ -6,29 +6,17 @@ import Image from "next/image";
 
 const skills = {
   CMS: ["Shopify", "WordPress", "Webflow"],
-  Frontend: ["React/Next.js", "HTML5/CSS3", "Tailwind CSS", "JavaScript"],
+  Frontend: ["Next.js", "React", "Tailwind", "HTML/CSS", "JavaScript"],
   DevTools: ["Git", "Figma", "Photoshop", "Canva"],
-  MarketingAnalytics: [
-    "GA4",
-    "GTM",
-    "Search Console",
-    "Google Ads",
-    "Meta Ads",
-    "Pixel",
-  ],
-  SEOCRO: [
-    "On-Page SEO",
-    "Technical SEO",
-    "Conversion Rate Optimization",
-    "Speed Optimization",
-  ],
+  MarketingAnalytics: ["GA4", "GTM", "Search Console", "Google Ads", "Clarity", "Pixel"],
+  SEOCRO: ["On-Page SEO", "Technical SEO", "CRO", "Site Speed"],
 };
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState("CMS");
 
   return (
-    <section className="bg-gray-50 min-h-screen md:min-h-[35rem] xl:min-h-screen flex items-center">
+<section className="bg-gray-50 min-h-screen md:min-h-[80vh] xl:min-h-[calc(100vh-8rem)] flex items-center px-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row-reverse items-center gap-12">
         {/* Image Section */}
         <motion.div
@@ -58,7 +46,7 @@ export default function Hero() {
           <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-gray-900 mb-4">
             Hi, I’m Imtiaz Hussain
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8">
+          <p className="text-sm sm:text-base md:text-[16px] text-gray-600 mb-8 text-justify">
             Expert in Shopify & WordPress with hands-on experience in React and
             Next.js. Skilled in SEO, CRO, Google tools, and speed optimization
             to build fast, conversion-focused websites.
@@ -70,9 +58,9 @@ export default function Hero() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`relative pb-2 text-lg font-medium transition-colors ${
+                className={`relative pb-2 text-base font-medium transition-colors ${
                   activeTab === tab
-                    ? "text-indigo-600"
+                    ? "text-black"
                     : "text-gray-500 hover:text-gray-700"
                 }`}
               >
@@ -100,7 +88,7 @@ export default function Hero() {
               {skills[activeTab].map((skill) => (
                 <span
                   key={skill}
-                  className="px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium shadow-sm hover:bg-indigo-100 transition"
+                  className="px-4 py-2 bg-gray-100 text-btnbg rounded-full text-xs font-medium shadow-sm hover:bg-indigo-100 transition"
                 >
                   {skill}
                 </span>
