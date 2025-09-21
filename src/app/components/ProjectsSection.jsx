@@ -75,8 +75,8 @@ export default function ProjectsSection() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 3500, disableOnInteraction: false }}
           breakpoints={{
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 1 },
+            1024: { slidesPerView: 2 },
           }}
           className="pb-12" // padding-bottom creates space for dots
         >
@@ -91,7 +91,7 @@ export default function ProjectsSection() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <div className="relative h-56 md:h-48 lg:h-56">
+                <div className="relative h-56 md:h-56 lg:h-64">
                   <Image
                     src={p.image}
                     alt={p.title}
