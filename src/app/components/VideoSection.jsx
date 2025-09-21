@@ -45,7 +45,7 @@ export default function VideoSection() {
                 {/* YouTube Video Embed */}
                 <iframe
                   width="100%"
-                  height="215"
+                  height="250"
                   src={embedUrl}
                   title={video.title}
                   frameBorder="0"
