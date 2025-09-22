@@ -5,13 +5,14 @@ import ProjectsSection from "./components/ProjectsSection";
 import VideoSection from "./components/VideoSection";
 import CategoriesTabs from "./components/CategoriesTabs";
 import Newsletter from "./components/Newsletter";
+import FeaturedPostsModern from "./components/FeaturedPosts";
 export default function HomePage() {
   return (
     <main>
       <Hero />
       <ProjectsSection />
       <VideoSection />
-      <CategoriesTabs />
+      <FeaturedPostsModern />
       <Newsletter />
     </main>
   );

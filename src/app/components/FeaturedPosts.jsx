@@ -6,19 +6,19 @@ import Link from "next/link";
 const posts = [
   {
     id: 1,
-    title: "How to Connect Sanity CMS with Next.js",
-    category: "Next.js",
-    description: "Learn how to connect Sanity CMS with Next.js for a seamless content experience.",
-    image: "https://source.unsplash.com/600x400/?nextjs,content",
-    href: "/blog/sanity-nextjs",
+    title: "Shopify Speed Optimization",
+    category: "Shopify",
+    description: "Learn how to make your Shopify store faster with these tips.",
+    image: "/assets/images/blogs/shopify/Speed-Optimization.webp",
+    href: "/blog/shopify-speed-optimization-how-to-make-your-store-faster",
   },
   {
     id: 2,
-    title: "Master Next.js 14 Features",
+    title: "Next.js + Sanity Full Setup Guide",
     category: "Next.js",
-    description: "Explore the latest Next.js features and boost performance.",
-    image: "https://source.unsplash.com/600x400/?nextjs,developer",
-    href: "/blog/nextjs-14",
+    description: "A comprehensive guide to setting up a blog with Next.js and Sanity.",
+    image: "assets/images/blogs/nextjs/sanity.png",
+    href: "/blog/next-js-sanity-full-setup-guide-from-zero-to-working-blog",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const posts = [
 
 export default function FeaturedPostsModern() {
   return (
-    <section className="py-10 bg-white dark:bg-gray-950">
+    <section id="blogs" className="py-10 bg-white dark:bg-gray-950 scroll-mt-0">
       <div className="max-w-6xl mx-auto px-6">
         {/* Heading */}
         <motion.h2
@@ -86,6 +86,9 @@ export default function FeaturedPostsModern() {
             </motion.div>
           ))}
         </div>
+      <a href="/blog"
+      className="relative block text-center text-white font-medium mt-10 bg-black px-4 py-2 rounded-lg w-max mx-auto transform transition-transform duration-300 hover:scale-105">
+       View All</a>
       </div>
     </section>
   );
