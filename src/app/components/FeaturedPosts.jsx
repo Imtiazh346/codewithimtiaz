@@ -32,7 +32,7 @@ const posts = [
 
 export default function FeaturedPostsModern() {
   return (
-    <section id="blogs" className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 bg-white dark:bg-gray-950 scroll-mt-0">
+    <section id="blogs" className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 bg-white dark:bg-gray-950 scroll-mt-[60px]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2
@@ -40,7 +40,7 @@ export default function FeaturedPostsModern() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-heading text-center mb-14"
+          className="text-3xl md:text-4xl font-bold text-gray-600 text-center mb-14"
         >
           ✨ Featured Posts
         </motion.h2>

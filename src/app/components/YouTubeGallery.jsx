@@ -18,9 +18,9 @@ const videos = [
 
 const YouTubeGallery = () => {
   return (
-    <section className="bg-gray-50 py-20 px-4 sm:px-6 md:px-8 lg:px-16">
+    <section id="tutorials" className="bg-gray-50 py-20 px-4 sm:px-6 md:px-8 lg:px-16 scroll-mt-[90px]">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
           Our Latest Videos
         </h2>
         <p className="text-gray-600 mt-4 text-lg md:text-xl">
