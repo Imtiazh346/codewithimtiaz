@@ -19,8 +19,8 @@ const videos = [
 
 export default function VideoSection() {
   return (
-    <section id="tutorials" className="py-10 bg-gray-50 dark:bg-gray-900 scroll-mt-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <section id="tutorials" className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 bg-gray-50 dark:bg-gray-900 scroll-mt-20">
+      <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <motion.h2
           className="text-4xl font-bold text-heading text-center mb-12"

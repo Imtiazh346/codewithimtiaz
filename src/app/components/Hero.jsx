@@ -16,8 +16,8 @@ export default function Hero() {
   const [activeTab, setActiveTab] = useState("CMS");
 
   return (
-<section className="bg-gray-50 min-h-screen md:min-h-[80vh] xl:min-h-[calc(100vh-8rem)] flex items-center px-6">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row-reverse items-center gap-12">
+<section className="px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 min-h-screen md:min-h-[80vh] xl:min-h-[calc(100vh-8rem)] flex items-center">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12">
         {/* Image Section */}
         <motion.div
           initial={{ x: -50, opacity: 0 }}

@@ -32,8 +32,8 @@ const posts = [
 
 export default function FeaturedPostsModern() {
   return (
-    <section id="blogs" className="py-10 bg-white dark:bg-gray-950 scroll-mt-0">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="blogs" className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 bg-white dark:bg-gray-950 scroll-mt-0">
+      <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

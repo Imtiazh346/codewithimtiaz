@@ -23,8 +23,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+    <header className="sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 bg-white shadow-md dark:bg-gray-900 ">
+      <div className="max-w-6xl mx-auto flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="font-serif text-2xl font-bold text-primary">
           CodeWithImtiaz
