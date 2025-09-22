@@ -6,11 +6,11 @@ import Link from "next/link";
 const posts = [
   {
     id: 1,
-    title: "Shopify Theme Customization Guide",
-    category: "Shopify",
-    description: "Learn how to customize Shopify themes like a pro.",
-    image: "https://source.unsplash.com/600x400/?shopify,ecommerce",
-    href: "/blog/shopify-theme",
+    title: "How to Connect Sanity CMS with Next.js",
+    category: "Next.js",
+    description: "Learn how to connect Sanity CMS with Next.js for a seamless content experience.",
+    image: "https://source.unsplash.com/600x400/?nextjs,content",
+    href: "/blog/sanity-nextjs",
   },
   {
     id: 2,
