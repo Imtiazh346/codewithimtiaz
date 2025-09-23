@@ -43,7 +43,7 @@ export default function AffiliateToolsSection() {
             href={tool.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 flex flex-col items-start hover:shadow-xl transition"
+            className="group bg-white shadow-lg rounded-2xl p-6 flex flex-col items-start hover:shadow-xl transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >

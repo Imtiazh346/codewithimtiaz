@@ -32,7 +32,7 @@ const posts = [
 
 export default function FeaturedPostsModern() {
   return (
-    <section id="blogs" className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 bg-white dark:bg-gray-950 scroll-mt-[60px]">
+    <section id="blogs" className="px-4 sm:px-6 md:px-8 lg:px-16 py-10 bg-white scroll-mt-[60px]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2
@@ -54,7 +54,7 @@ export default function FeaturedPostsModern() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group"
             >
               {/* Image */}
               <div className="overflow-hidden">

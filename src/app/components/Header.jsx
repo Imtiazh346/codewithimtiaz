@@ -23,7 +23,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 bg-white shadow-md dark:bg-gray-900 ">
+    <header className="sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 bg-white shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="font-serif text-2xl font-bold text-primary">
@@ -38,12 +38,12 @@ export default function Header() {
                 <span className="cursor-pointer text-[#170101] font-semibold text-base">
                   {item.name}
                 </span>
-                <div className="cursor-pointer font-semibold absolute left-0 top-full bg-white dark:bg-gray-800 shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
+                <div className="cursor-pointer font-semibold absolute left-0 top-full bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
                   {item.children.map((child, i) => (
                     <Link
                       key={i}
                       href={child.href}
-                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700"
+                      className="block px-4 py-2 hover:bg-gray-100"
                     >
                       {child.name}
                     </Link>
@@ -89,11 +89,11 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg">
+        <div className="md:hidden bg-white shadow-lg">
           {navItems.map((item, idx) => (
             <div
               key={idx}
-              className="border-b border-gray-200 dark:border-gray-700"
+              className="border-b border-gray-200"
             >
               {item.children ? (
                 <details>
