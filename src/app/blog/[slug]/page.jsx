@@ -23,13 +23,7 @@ export default async function BlogPost({ params }) {
   if (!post) return <div>Post not found</div>;
 
   return (
-    <article className="max-w-3xl mx-auto p-6 prose prose-lg">
-      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-      <p className="text-gray-500 text-sm mb-6">
-        By {post.author?.name} |{" "}
-        {new Date(post.publishedAt).toLocaleDateString()}
-      </p>
-
+    <article className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 p-6 prose prose-lg">
       {post.mainImage?.asset?.url && (
         <img
           src={post.mainImage.asset.url}
@@ -37,7 +31,12 @@ export default async function BlogPost({ params }) {
           className="rounded mb-8"
         />
       )}
+      <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
 
+      <p className="text-gray-500 text-sm mb-6">
+        By {post.author?.name} |{" "}
+        {new Date(post.publishedAt).toLocaleDateString()}
+      </p>
       {/* FIX: Pass components */}
       <PortableText value={post.body} components={PortableTextComponents} />
     </article>
