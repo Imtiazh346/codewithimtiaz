@@ -10,7 +10,9 @@ export default async function CategoryPage({ params }) {
   if (!posts || posts.length === 0) {
     return (
       <div className="max-w-6xl mx-auto py-12">
-        <h1 className="text-3xl font-bold mb-4">No posts found in this category</h1>
+        <h1 className="text-3xl font-bold mb-4">
+          No posts found in this category
+        </h1>
         <Link href="/blog" className="text-blue-600 hover:underline">
           ← Back to Blog
         </Link>
@@ -23,19 +25,26 @@ export default async function CategoryPage({ params }) {
       <h1 className="text-4xl font-bold mb-8">Category: {slug}</h1>
       <div className="grid gap-8 sm:grid-cols-2">
         {posts.map((post) => (
-          <article key={post._id} className="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+          <article
+            key={post._id}
+            className="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden"
+          >
             {post.mainImage && (
               <Image
                 src={post.mainImage.asset.url}
                 alt={post.title}
-                width={600}
-                height={350}
-                className="h-48 w-full object-cover"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto rounded-lg object-cover"
               />
             )}
             <div className="p-6">
               <h2 className="text-xl font-bold mb-2">
-                <Link href={`/blog/${post.slug.current}`} className="hover:text-blue-600">
+                <Link
+                  href={`/blog/${post.slug.current}`}
+                  className="hover:text-blue-600"
+                >
                   {post.title}
                 </Link>
               </h2>
