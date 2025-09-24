@@ -9,11 +9,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0f172a] py-12 text-slate-300 overflow-hidden font-inter">
+    <footer className="relative bg-gray-900 py-12 text-gray-300 overflow-hidden font-inter">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Section */}
         <div>
-          <h3 className="text-xl font-bold mb-4">About</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">About</h3>
           <p>
             CodeWithImtiaz shares tutorials, tips, and guides on Next.js,
             Shopify, WordPress, HTML, CSS, and website optimization.
@@ -22,7 +22,7 @@ export default function Footer() {
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">Quick Links</h3>
           <ul className="space-y-2">
             <li>
               <Link href="/" className="hover:text-primary transition">Home</Link>
@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Categories */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Categories</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">Categories</h3>
           <ul className="space-y-2">
             <li><Link href="/category/shopify" className="hover:text-primary transition">Shopify</Link></li>
             <li><Link href="/category/wordpress" className="hover:text-primary transition">WordPress</Link></li>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         {/* Social Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Follow Me</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">Follow Me</h3>
           <div className="flex flex-col space-y-3">
             <a
               href="https://www.youtube.com/@thecodewithimtiaz"
