@@ -64,7 +64,7 @@ export default async function BlogPage() {
       </section>
 
       {/* Sidebar */}
-      <aside className="space-y-10">
+      <aside className="relative space-y-10 self-start lg:mt-16">
         {/* Categories */}
         {/* Categories */}
         <div className="bg-purple-100  rounded-xl p-6 shadow">
@@ -97,15 +97,6 @@ export default async function BlogPage() {
           <ul className="space-y-4">
             {latestPosts.map((post) => (
               <li key={post._id} className="flex items-start space-x-3">
-                {post.mainImage && (
-                  <Image
-                    src={post.mainImage.asset.url}
-                    alt={post.title}
-                    width={60}
-                    height={60}
-                    className="rounded object-cover"
-                  />
-                )}
                 <div>
                   <Link
                     href={`/blog/${post.slug.current}`}
