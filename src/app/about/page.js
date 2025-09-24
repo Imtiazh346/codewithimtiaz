@@ -5,9 +5,9 @@ import { FaShopify, FaWordpressSimple, FaReact } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen px-4 sm:px-6 md:px-8 lg:px-16 bg-background text-foreground">
       {/* Who We Are Section */}
-      <section className="py-20 container mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 items-center">
+      <section className="max-w-6xl py-20 container mx-auto grid md:grid-cols-2 gap-12 items-center">
         <motion.img
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
           alt="Career Journey"
