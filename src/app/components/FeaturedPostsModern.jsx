@@ -40,7 +40,7 @@ export default function FeaturedPostsModern() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-gray-600 text-center mb-14"
+          className="text-3xl md:text-4xl font-bold text-gray-600 text-center mb-12"
         >
           ✨ Featured Posts
         </motion.h2>
