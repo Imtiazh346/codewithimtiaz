@@ -33,7 +33,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white min-h-screen flex items-center py-16 lg:py-24">
+    <section className="relative overflow-hidden bg-white min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-16">
       {/* Subtle background wave for depth */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-50 to-transparent"></div>
@@ -42,8 +42,18 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
+                    {/* Secondary CTA */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-6 text-sm text-gray-500"
+            >
+              Trusted by 50+ clients | 3+ years building conversion-focused sites
+            </motion.p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          
           {/* Text & CTA Section */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -64,7 +74,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg lg:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed"
+              className="text-base text-gray-600 mb-8 max-w-lg leading-relaxed"
             >
               Transforming ideas into high-converting websites with expertise in Shopify, WordPress, React, Next.js, SEO, and CRO. Let&apos;s create digital experiences that drive results.
             </motion.p>
@@ -77,9 +87,9 @@ export default function Hero() {
             >
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden"
+                className="group relative inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold text-base rounded-2xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden"
               >
-                <span className="relative z-10">Start Your Project Today</span>
+                <span className="relative z-10">Let&apos;s Talk</span>
                 <motion.span
                   className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 -z-10"
                   initial={{ scaleX: 0 }}
@@ -92,15 +102,6 @@ export default function Hero() {
               </Link>
             </motion.div>
 
-            {/* Secondary CTA */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-6 text-sm text-gray-500"
-            >
-              Trusted by 50+ clients | 3+ years building conversion-focused sites
-            </motion.p>
           </motion.div>
 
           {/* Image & Circular Orbiting Icons Section */}
@@ -110,10 +111,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-70 h-70 lg:w-[28rem] lg:h-[28rem] flex items-center justify-center">
+            <div className="relative w-70 h-70 lg:w-80 lg:h-80 flex items-center justify-center">
               
               {/* Circular Line */}
-              <div className="absolute w-full h-full rounded-full border border-gray-300/50"></div>
+              <div className="absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-gray-300/50"></div>
               
               {/* Orbiting Icons Container */}
               <motion.div
@@ -127,7 +128,8 @@ export default function Hero() {
               >
                 {orbitingIcons.map((skill, index) => {
                   const angle = (index / orbitingIcons.length) * 360;
-                  const radius = 180; // Distance from center
+                  // Position icons exactly on the border line (radius = half of container width minus icon offset)
+                  const radius = 200; // Adjust this value to move icons closer to or further from the border
                   const x = Math.cos((angle * Math.PI) / 180) * radius;
                   const y = Math.sin((angle * Math.PI) / 180) * radius;
 
@@ -145,19 +147,19 @@ export default function Hero() {
                         transition: { duration: 0.2 }
                       }}
                     >
-                      <skill.icon className={`${skill.color} w-10 h-10 lg:w-12 lg:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300`} />
+                      <skill.icon className={`${skill.color} w-8 h-8 lg:w-12 lg:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300`} />
                     </motion.div>
                   );
                 })}
               </motion.div>
 
               {/* Profile Image - Centered */}
-              <div className="relative z-10 w-64 h-64 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl ">
+              <div className="relative z-10 w-80 h-80 lg:w-full lg:h-full rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/assets/Imtiaz-removebg-preview.png"
                   alt="Imtiaz Hussain - Full-Stack Developer"
-                  width={320}
-                  height={320}
+                  width={400}
+                  height={400}
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
                   priority
                 />
