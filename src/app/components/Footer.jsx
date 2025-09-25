@@ -266,7 +266,7 @@ const Footer = () => {
               © {new Date().getFullYear()} Imtiaz Hussain. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
-              Crafted with ❤️ using Next.js & Tailwind CSS
+              Code with ❤️ by Imtiaz Hussain
             </p>
           </div>
         </div>
