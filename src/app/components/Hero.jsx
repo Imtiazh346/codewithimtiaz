@@ -55,7 +55,7 @@ export default function Hero() {
         </svg>
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Secondary CTA */}
 <motion.p
   initial={{ opacity: 0, y: 30 }}

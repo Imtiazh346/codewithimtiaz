@@ -42,7 +42,7 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-16 bg-gray-50 scroll-mt-20">
-      <div className="max-w-6xl mx-auto px-4 lg:px-0">
+      <div className="max-w-7xl mx-auto px-4 lg:px-0">
         {/* header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <motion.div

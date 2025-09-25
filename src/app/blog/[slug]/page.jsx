@@ -23,7 +23,7 @@ export default async function BlogPost({ params }) {
   if (!post) return <div>Post not found</div>;
 
   return (
-    <article className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 p-6 prose prose-lg">
+    <article className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 p-6 prose prose-lg">
       {post.mainImage?.asset?.url && (
         <img
           src={post.mainImage.asset.url}

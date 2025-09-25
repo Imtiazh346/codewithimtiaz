@@ -77,7 +77,7 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-16">
         {filteredProjects.map((project) => (
           <Link
             key={project.id}

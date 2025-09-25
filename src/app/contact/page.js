@@ -45,7 +45,7 @@ export default function ContactSection() {
 
   return (
     <section className="py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-12">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         {/* Social Media Links */}
         <div className="flex-1 flex flex-col items-center lg:items-start justify-center space-y-6">
           <h2 className="text-3xl font-bold text-gray-800">Connect with me</h2>

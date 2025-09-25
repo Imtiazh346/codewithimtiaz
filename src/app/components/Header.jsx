@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 bg-white shadow-md">
-      <div className="max-w-6xl mx-auto flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="font-sans text-2xl font-bold text-primary">
           Code with Imtiaz
