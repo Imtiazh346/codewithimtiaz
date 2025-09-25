@@ -42,7 +42,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white min-h-screen flex items-center px-4 sm:px-6 md:px-8 lg:px-16">
+    <section className="relative overflow-hidden bg-white min-h-[80vh] lg:min-h-[90vh] flex items-center px-4 sm:px-6 md:px-8 lg:px-16">
       {/* Subtle background wave for depth */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-50 to-transparent"></div>
@@ -61,9 +61,9 @@ export default function Hero() {
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8, delay: 0.8 }}
-  className="mt-6 text-sm font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-purple-600"
+  className="mt-6 mb-2 text-sm font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-purple-600"
 >
-  Trusted by <span className="font-bold">50+ clients</span> | <span className="font-bold">3+ years</span> building conversion-focused sites
+  Trusted by <span className="font-bold">50+ clients</span> | <span className="font-bold">3 years</span> experience
 </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
