@@ -104,7 +104,7 @@ export default function Hero() {
             >
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold text-base rounded-2xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden"
+                className="group relative inline-flex items-center px-6 py-3 bg-black text-white font-bold text-base rounded-2xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden"
               >
                 <span className="relative z-10">Let&apos;s Talk</span>
                 <motion.span
