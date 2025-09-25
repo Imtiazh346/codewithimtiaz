@@ -57,14 +57,15 @@ export default function Hero() {
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Secondary CTA */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-6 text-sm text-gray-500"
-        >
-          Trusted by 50+ clients | 3+ years building conversion-focused sites
-        </motion.p>
+<motion.p
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.8 }}
+  className="mt-6 text-sm font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-purple-600"
+>
+  Trusted by <span className="font-bold">50+ clients</span> | <span className="font-bold">3+ years</span> building conversion-focused sites
+</motion.p>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text & CTA Section */}
           <motion.div
@@ -77,10 +78,10 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-5xl lg:text-7xl font-black text-gray-900 mb-6 leading-none"
+              className="text-5xl lg:text-7xl font-black text-gray-900 mb-6 leading-none "
             >
               Hi, I&apos;m{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className=" bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-purple-700">
                 Imtiaz Hussain
               </span>
             </motion.h1>
