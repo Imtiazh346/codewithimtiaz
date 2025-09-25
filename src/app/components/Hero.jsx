@@ -1,101 +1,170 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+import { SiNextdotjs, SiShopify, SiWordpress, SiReact } from "react-icons/si";
 
-const skills = {
-  CMS: ["Shopify", "WordPress", "Webflow"],
-  Frontend: ["Next.js", "React", "Tailwind", "HTML/CSS", "JavaScript"],
-  DevTools: ["Git", "Figma", "Photoshop", "Canva"],
-  MarketingAnalytics: ["GA4", "GTM", "Search Console", "Google Ads", "Clarity", "Pixel"],
-  SEOCRO: ["On-Page SEO", "Technical SEO", "CRO", "Site Speed"],
-};
+const skills = [
+  { category: "CMS", items: ["Shopify", "WordPress", "Webflow"] },
+  { category: "Frontend", items: ["Next.js", "React", "Tailwind", "HTML/CSS", "JavaScript"] },
+  { category: "DevTools", items: ["Git", "Figma", "Photoshop", "Canva"] },
+  { category: "Marketing & Analytics", items: ["GA4", "GTM", "Search Console", "Google Ads", "Clarity", "Pixel"] },
+  { category: "SEO & CRO", items: ["On-Page SEO", "Technical SEO", "CRO", "Site Speed"] },
+];
+
+// Four icons for the circular path
+const orbitingIcons = [
+  { name: "Next.js", icon: SiNextdotjs, color: "text-gray-900" },
+  { name: "Shopify", icon: SiShopify, color: "text-red-500" },
+  { name: "WordPress", icon: SiWordpress, color: "text-blue-700" },
+  { name: "React", icon: SiReact, color: "text-blue-500" },
+];
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState("CMS");
+  const [currentSkillSet, setCurrentSkillSet] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkillSet((prev) => (prev + 1) % skills.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-<section className="px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 min-h-screen md:min-h-[80vh] xl:min-h-[calc(100vh-8rem)] flex items-center">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-12">
-        {/* Image Section */}
-        <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full flex justify-center lg:justify-end lg:w-1/2"
-        >
-          <div className="w-48 h-48 sm:w-56 sm:h-56 lg:w-80 lg:h-80 bg-gray-200 rounded-2xl shadow-xl overflow-hidden flex items-center justify-center">
-            <Image
-              src="/assets/images/imtiaz.png"
-              alt="Imtiaz Hussain"
-              width={320}
-              height={320}
-              className="object-cover rounded-2xl"
-              priority
-            />
-          </div>
-        </motion.div>
-        {/* Text & Tabs Section */}
-        <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 flex flex-col text-center lg:text-left"
-        >
-          <h1 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-gray-900 mb-4">
-            Hi, I’m Imtiaz Hussain
-          </h1>
-          <p className="text-sm sm:text-base md:text-[16px] text-gray-600 mb-8 text-justify">
-            Expert in Shopify & WordPress with hands-on experience in React and
-            Next.js. Skilled in SEO, CRO, Google tools, and speed optimization
-            to build fast, conversion-focused websites.
-          </p>
+    <section className="relative overflow-hidden bg-white min-h-screen flex items-center py-16 lg:py-24">
+      {/* Subtle background wave for depth */}
+      <div className="absolute inset-0">
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-50 to-transparent"></div>
+        <svg className="absolute bottom-0 left-0 w-full h-32 text-slate-100" fill="currentColor" viewBox="0 0 1440 320">
+          <path d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,122.7C960,149,1056,203,1152,213.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+      </div>
 
-          {/* Tabs */}
-          <div className="relative mb-6 flex flex-wrap justify-center lg:justify-start gap-4 border-b border-gray-200">
-            {Object.keys(skills).map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`relative pb-2 text-base font-medium transition-colors ${
-                  activeTab === tab
-                    ? "text-black"
-                    : "text-gray-500 hover:text-gray-700"
-                }`}
-              >
-                {tab}
-                {activeTab === tab && (
-                  <motion.div
-                    layoutId="underline"
-                    className="absolute left-0 bottom-0 h-[2px] w-full bg-indigo-600 rounded-full"
-                  />
-                )}
-              </button>
-            ))}
-          </div>
-
-          {/* Skills List */}
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Text & CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="lg:pr-12"
+          >
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-              className="flex flex-wrap gap-3 justify-center lg:justify-start"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl lg:text-7xl font-black text-gray-900 mb-6 leading-none"
             >
-              {skills[activeTab].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-gray-100 text-btnbg rounded-full text-xs font-medium shadow-sm hover:bg-indigo-100 transition"
-                >
-                  {skill}
-                </span>
-              ))}
+              Hi, I&apos;m <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Imtiaz Hussain</span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg lg:text-xl text-gray-600 mb-8 max-w-lg leading-relaxed"
+            >
+              Transforming ideas into high-converting websites with expertise in Shopify, WordPress, React, Next.js, SEO, and CRO. Let&apos;s create digital experiences that drive results.
+            </motion.p>
+
+            {/* Primary CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center px-8 py-4 bg-blue-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-blue-500/25 transition-all duration-300 overflow-hidden"
+              >
+                <span className="relative z-10">Start Your Project Today</span>
+                <motion.span
+                  className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 -z-10"
+                  initial={{ scaleX: 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </motion.div>
-          </AnimatePresence>
-        </motion.div>
+
+            {/* Secondary CTA */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-6 text-sm text-gray-500"
+            >
+              Trusted by 50+ clients | 3+ years building conversion-focused sites
+            </motion.p>
+          </motion.div>
+
+          {/* Image & Circular Orbiting Icons Section */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative flex justify-center lg:justify-end"
+          >
+            <div className="relative w-70 h-70 lg:w-[28rem] lg:h-[28rem] flex items-center justify-center">
+              
+              {/* Circular Line */}
+              <div className="absolute w-full h-full rounded-full border border-gray-300/50"></div>
+              
+              {/* Orbiting Icons Container */}
+              <motion.div
+                className="absolute w-full h-full"
+                animate={{ rotate: 360 }}
+                transition={{ 
+                  duration: 25,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+              >
+                {orbitingIcons.map((skill, index) => {
+                  const angle = (index / orbitingIcons.length) * 360;
+                  const radius = 180; // Distance from center
+                  const x = Math.cos((angle * Math.PI) / 180) * radius;
+                  const y = Math.sin((angle * Math.PI) / 180) * radius;
+
+                  return (
+                    <motion.div
+                      key={skill.name}
+                      className="absolute"
+                      style={{
+                        left: '50%',
+                        top: '50%',
+                        transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
+                      }}
+                      whileHover={{ 
+                        scale: 1.3,
+                        transition: { duration: 0.2 }
+                      }}
+                    >
+                      <skill.icon className={`${skill.color} w-10 h-10 lg:w-12 lg:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300`} />
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
+
+              {/* Profile Image - Centered */}
+              <div className="relative z-10 w-64 h-64 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-2xl ">
+                <Image
+                  src="/assets/Imtiaz-removebg-preview.png"
+                  alt="Imtiaz Hussain - Full-Stack Developer"
+                  width={320}
+                  height={320}
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                  priority
+                />
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
