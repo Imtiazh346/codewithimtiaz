@@ -8,10 +8,19 @@ import { SiNextdotjs, SiShopify, SiWordpress, SiReact } from "react-icons/si";
 
 const skills = [
   { category: "CMS", items: ["Shopify", "WordPress", "Webflow"] },
-  { category: "Frontend", items: ["Next.js", "React", "Tailwind", "HTML/CSS", "JavaScript"] },
+  {
+    category: "Frontend",
+    items: ["Next.js", "React", "Tailwind", "HTML/CSS", "JavaScript"],
+  },
   { category: "DevTools", items: ["Git", "Figma", "Photoshop", "Canva"] },
-  { category: "Marketing & Analytics", items: ["GA4", "GTM", "Search Console", "Google Ads", "Clarity", "Pixel"] },
-  { category: "SEO & CRO", items: ["On-Page SEO", "Technical SEO", "CRO", "Site Speed"] },
+  {
+    category: "Marketing & Analytics",
+    items: ["GA4", "GTM", "Search Console", "Google Ads", "Clarity", "Pixel"],
+  },
+  {
+    category: "SEO & CRO",
+    items: ["On-Page SEO", "Technical SEO", "CRO", "Site Speed"],
+  },
 ];
 
 // Four icons for the circular path
@@ -37,23 +46,26 @@ export default function Hero() {
       {/* Subtle background wave for depth */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-slate-50 to-transparent"></div>
-        <svg className="absolute bottom-0 left-0 w-full h-32 text-slate-100" fill="currentColor" viewBox="0 0 1440 320">
+        <svg
+          className="absolute bottom-0 left-0 w-full h-32 text-slate-100"
+          fill="currentColor"
+          viewBox="0 0 1440 320"
+        >
           <path d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,122.7C960,149,1056,203,1152,213.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
         </svg>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
-                    {/* Secondary CTA */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-6 text-sm text-gray-500"
-            >
-              Trusted by 50+ clients | 3+ years building conversion-focused sites
-            </motion.p>
+        {/* Secondary CTA */}
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-6 text-sm text-gray-500"
+        >
+          Trusted by 50+ clients | 3+ years building conversion-focused sites
+        </motion.p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          
           {/* Text & CTA Section */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -67,7 +79,10 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl lg:text-7xl font-black text-gray-900 mb-6 leading-none"
             >
-              Hi, I&apos;m <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Imtiaz Hussain</span>
+              Hi, I&apos;m{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Imtiaz Hussain
+              </span>
             </motion.h1>
 
             <motion.p
@@ -76,7 +91,9 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-base text-gray-600 mb-8 max-w-lg leading-relaxed"
             >
-              Transforming ideas into high-converting websites with expertise in Shopify, WordPress, React, Next.js, SEO, and CRO. Let&apos;s create digital experiences that drive results.
+              Transforming ideas into high-converting websites with expertise in
+              Shopify, WordPress, React, Next.js, SEO, and CRO. Let&apos;s
+              create digital experiences that drive results.
             </motion.p>
 
             {/* Primary CTA */}
@@ -96,12 +113,21 @@ export default function Hero() {
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
                 />
-                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <svg
+                  className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
                 </svg>
               </Link>
             </motion.div>
-
           </motion.div>
 
           {/* Image & Circular Orbiting Icons Section */}
@@ -112,18 +138,17 @@ export default function Hero() {
             className="relative flex justify-center lg:justify-end"
           >
             <div className="relative w-70 h-70 lg:w-80 lg:h-80 flex items-center justify-center">
-              
               {/* Circular Line */}
               <div className="absolute w-[250px] h-[250px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-gray-300/50"></div>
-              
+
               {/* Orbiting Icons Container */}
               <motion.div
                 className="absolute w-full h-full"
                 animate={{ rotate: 360 }}
-                transition={{ 
+                transition={{
                   duration: 25,
                   repeat: Infinity,
-                  ease: "linear"
+                  ease: "linear",
                 }}
               >
                 {orbitingIcons.map((skill, index) => {
@@ -136,25 +161,27 @@ export default function Hero() {
                   return (
                     <motion.div
                       key={skill.name}
-                      className="absolute"
+                      className="absolute z-50" 
                       style={{
-                        left: '50%',
-                        top: '50%',
+                        left: "50%",
+                        top: "50%",
                         transform: `translate(-50%, -50%) translate(${x}px, ${y}px)`,
                       }}
-                      whileHover={{ 
+                      whileHover={{
                         scale: 1.3,
-                        transition: { duration: 0.2 }
+                        transition: { duration: 0.2 },
                       }}
                     >
-                      <skill.icon className={`${skill.color} w-8 h-8 lg:w-12 lg:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300`} />
+                      <skill.icon
+                        className={`${skill.color} hidden lg:block lg:w-12 lg:h-12 opacity-80 hover:opacity-100 transition-opacity duration-300`}
+                      />
                     </motion.div>
                   );
                 })}
               </motion.div>
 
               {/* Profile Image - Centered */}
-              <div className="relative z-10 w-80 h-80 lg:w-full lg:h-full rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative z-0 w-80 h-80 lg:w-full lg:h-full lg:rounded-3xl overflow-hidden lg:shadow-2xl">
                 <Image
                   src="/assets/Imtiaz-removebg-preview.png"
                   alt="Imtiaz Hussain - Full-Stack Developer"
