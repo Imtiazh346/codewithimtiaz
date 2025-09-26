@@ -16,20 +16,21 @@ export default async function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Main content */}
-          <section className="lg:col-span-3 space-y-12">
+          <section className="lg:col-span-2 space-y-12">
             <header className="text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-600 to-purple-700 bg-clip-text text-transparent mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-600 bg-clip-text mb-4">
                 Blog Posts
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                Discover insightful articles, tips, and updates from our journey in web development and beyond.
+                Discover insightful articles, tips, and updates from our journey
+                in web development and beyond.
               </p>
             </header>
 
             {/* Post grid */}
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
               {posts.map((post) => (
                 <article
                   key={post._id}
@@ -79,8 +80,18 @@ export default async function BlogPage() {
                       className="mt-auto inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-200"
                     >
                       Read More →
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </Link>
                   </div>
@@ -90,7 +101,9 @@ export default async function BlogPage() {
 
             {posts.length === 0 && (
               <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No posts available yet. Stay tuned!</p>
+                <p className="text-gray-500 text-lg">
+                  No posts available yet. Stay tuned!
+                </p>
               </div>
             )}
           </section>
@@ -98,29 +111,56 @@ export default async function BlogPage() {
           {/* Sidebar */}
           <aside className="lg:col-span-1 space-y-8 self-start sticky top-8">
             {/* Categories */}
-            <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 -z-10"></div>
-              <h2 className="text-2xl font-black mb-3 text-gray-900 relative z-10 border-b border-blue-100/50 pb-3 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h7" />
+            <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 overflow-hidden relative">
+              {/* Soft gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 to-purple-50/40 -z-10"></div>
+
+              {/* Heading */}
+              <h2 className="text-2xl font-extrabold mb-5 text-gray-900 relative z-10 border-b border-blue-100/50 pb-3 flex items-center">
+                <svg
+                  className="w-6 h-6 mr-2 text-gray-900"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
                 </svg>
                 Categories
               </h2>
+
+              {/* Category List */}
               <ul className="space-y-3 relative z-10">
-                {categories.map((cat, index) => (
+                {categories.map((cat) => (
                   <li key={cat._id} className="group">
                     {cat.slug?.current ? (
                       <Link
                         href={`/category/${cat.slug.current}`}
-                        className="flex items-center justify-between text-gray-700 hover:text-blue-600 font-medium transition-all duration-200 py-1  rounded-2xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:shadow-md transform hover:scale-[1.02]"
+                        className="flex items-center justify-between text-gray-700 hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 rounded-2xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 hover:shadow-lg transform hover:scale-[1.02]"
                       >
-                        <span className="">{cat.title}</span>
-                        <svg className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-200 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        <span className="truncate">{cat.title}</span>
+                        <svg
+                          className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300 ml-2 text-blue-600"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M9 5l7 7-7 7"
+                          />
                         </svg>
                       </Link>
                     ) : (
-                      <span className="text-gray-500 block py-3 px-3 font-medium">{cat.title}</span>
+                      <span className="text-gray-400 block py-2 px-3 font-medium">
+                        {cat.title}
+                      </span>
                     )}
                   </li>
                 ))}
@@ -128,25 +168,40 @@ export default async function BlogPage() {
             </div>
 
             {/* Latest posts */}
-            <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-indigo-50/50 -z-10"></div>
-              <h2 className="text-2xl font-black mb-6 text-gray-900 relative z-10 border-b border-purple-100/50 pb-3 flex items-center">
-                <svg className="w-6 h-6 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <div className="bg-white rounded-3xl p-6 shadow-xl border border-gray-100 overflow-hidden relative">
+              {/* Soft gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-50/40 to-indigo-50/40 -z-10"></div>
+
+              {/* Heading */}
+              <h2 className="text-2xl font-extrabold mb-6 text-gray-900 relative z-10 border-b border-purple-100/50 pb-3 flex items-center">
+                <svg
+                  className="w-6 h-6 mr-2 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
                 </svg>
                 Latest Posts
               </h2>
-              <ul className="space-y-4 relative z-10">
+
+              {/* Posts List */}
+              <ul className="space-y-5 relative z-10">
                 {latestPosts.map((post) => (
                   <li key={post._id} className="group">
                     <Link
                       href={`/blog/${post.slug.current}`}
-                      className="block p-1 rounded-2xl hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:shadow-md transition-all duration-200 transform hover:scale-[1.02] border border-transparent hover:border-purple-200"
+                      className="block p-3 rounded-2xl hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 hover:shadow-lg transition-all duration-300 border border-transparent hover:border-purple-200"
                     >
-                      <h3 className="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors truncate mb-2">
+                      <h3 className="font-semibold text-gray-800 group-hover:text-purple-700 transition-colors text-base leading-snug mb-1 line-clamp-2">
                         {post.title}
                       </h3>
-                      <p className="text-xs text-gray-500">
+                      <p className="text-xs text-gray-500 tracking-wide">
                         {new Date(post.publishedAt).toLocaleDateString()}
                       </p>
                     </Link>
