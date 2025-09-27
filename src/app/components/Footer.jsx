@@ -205,7 +205,7 @@ const Footer = () => {
                     className="text-gray-400 hover:text-white transition-colors duration-300"
                     target="_blank"
                   >
-                    <FaLinkedin className="w-5 h-5" />
+                    <FaLinkedin className="w-5 h-5"  />
                   </a>
                   <a
                     href="https://www.instagram.com/code_with_imtiaz/"
