@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   const usefulLinks = [
-    { name: "About", href: "/" },
+    { name: "Home", href: "/" },
     { name: "Blog", href: "/blog" },
     { name: "Tutorials", href: "/#tutorials" },
     { name: "Projects", href: "/projects" },
