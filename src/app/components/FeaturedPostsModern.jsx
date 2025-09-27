@@ -9,7 +9,7 @@ const posts = [
     title: "Shopify Speed Optimization",
     category: "Shopify",
     description: "Learn how to make your Shopify store faster with these tips.",
-    image: "/assets/images/blogs/shopify/Speed-Optimization.webp",
+    image: "/assets/images/blogs/shopify/Speed-Optimization.png",
     href: "/blog/shopify-speed-optimization-how-to-make-your-store-faster",
   },
   {
@@ -22,11 +22,11 @@ const posts = [
   },
   {
     id: 3,
-    title: "WordPress SEO Tips 2025",
-    category: "WordPress",
-    description: "Boost your WordPress rankings with proven SEO hacks.",
-    image: "https://source.unsplash.com/600x400/?wordpress,seo",
-    href: "/blog/wordpress-seo",
+    title: "How to Connect a Shopify Theme with GitHub (Step-by-Step Guide)",
+    category: "Shopify",
+    description: "Step-by-step guide to connect your Shopify theme with GitHub for version control",
+    image: "/assets/images/blogs/shopifywithgithub/shopfiygithub.png",
+    href: "/blog/how-to-connect-a-shopify-theme-with-github-step-by-step-guide",
   },
 ];
 

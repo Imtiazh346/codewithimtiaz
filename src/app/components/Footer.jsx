@@ -2,18 +2,18 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { 
-  FaGithub, 
-  FaLinkedin, 
-  FaTwitter, 
-  FaInstagram, 
-  FaEnvelope,
+import {
+  FaGithub,
+  FaLinkedin,
+  FaYoutube,
+  FaInstagram,
   FaChevronDown,
-  FaChevronUp
+  FaChevronUp,
+  FaFacebook,
 } from "react-icons/fa";
 
 const Footer = () => {
-  const [activeTab, setActiveTab] = useState('about');
+  const [activeTab, setActiveTab] = useState("about");
 
   const toggleTab = (tab) => {
     setActiveTab(activeTab === tab ? null : tab);
@@ -21,7 +21,7 @@ const Footer = () => {
 
   useEffect(() => {
     // Set first tab as active on mobile by default
-    setActiveTab('about');
+    setActiveTab("about");
   }, []);
 
   const services = [
@@ -43,8 +43,14 @@ const Footer = () => {
   ];
 
   const latestPosts = [
-    { title: "How to Optimize Shopify Store Speed", href: "/blog/shopify-speed-optimization-how-to-make-your-store-faster" },
-    { title: "Next.js + Sanity Full Setup Guide", href: "/blog/next-js-sanity-full-setup-guide-from-zero-to-working-blog" },
+    {
+      title: "How to Optimize Shopify Store Speed",
+      href: "/blog/shopify-speed-optimization-how-to-make-your-store-faster",
+    },
+    {
+      title: "Next.js + Sanity Full Setup Guide",
+      href: "/blog/next-js-sanity-full-setup-guide-from-zero-to-working-blog",
+    },
     { title: "SEO Best Practices for 2024", href: "/blog" },
     { title: "Increasing Conversion Rates with CRO", href: "/blog" },
   ];
@@ -59,25 +65,46 @@ const Footer = () => {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold mb-4">About Me</h3>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Full-stack developer specializing in creating high-converting websites 
-                with Shopify, WordPress, and Next.js. Transforming ideas into digital 
-                experiences that drive results.
+                Full-stack developer specializing in creating high-converting
+                websites with Shopify, WordPress, and Next.js. Transforming
+                ideas into digital experiences that drive results.
               </p>
               <div className="flex space-x-4 pt-2">
-                <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a
+                  href="https://www.youtube.com/@thecodewithimtiaz"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  target="_blank"
+                >
+                  <FaYoutube className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://github.com/Imtiazh346/codewithimtiaz"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  target="_blank"
+                >
                   <FaGithub className="w-5 h-5" />
                 </a>
-                <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+                <a
+                  href="https://www.linkedin.com/in/dev-imtiaz/"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  target="_blank"
+                >
                   <FaLinkedin className="w-5 h-5" />
                 </a>
-                <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  <FaTwitter className="w-5 h-5" />
-                </a>
-                <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+
+                <a
+                  href="https://www.instagram.com/code_with_imtiaz/"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  target="_blank"
+                >
                   <FaInstagram className="w-5 h-5" />
                 </a>
-                <a href="mailto:hello@example.com" className="text-gray-400 hover:text-white transition-colors duration-300">
-                  <FaEnvelope className="w-5 h-5" />
+                <a
+                  href="https://www.facebook.com/codingwithimtiaz/"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  target="_blank"
+                >
+                  <FaFacebook className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -88,7 +115,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {services.map((service, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       href={service.href}
                       className="text-gray-300 hover:text-white text-sm transition-colors duration-300 block py-1"
                     >
@@ -105,7 +132,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {usefulLinks.map((link, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       href={link.href}
                       className="text-gray-300 hover:text-white text-sm transition-colors duration-300 block py-1"
                     >
@@ -122,7 +149,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 {latestPosts.map((post, index) => (
                   <li key={index}>
-                    <Link 
+                    <Link
                       href={post.href}
                       className="text-gray-300 hover:text-white text-sm transition-colors duration-300 block py-1 leading-tight"
                     >
@@ -142,34 +169,58 @@ const Footer = () => {
           {/* About Tab - Active by default */}
           <div className="border-b border-gray-700">
             <button
-              onClick={() => toggleTab('about')}
+              onClick={() => toggleTab("about")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
             >
               <span className="font-semibold">About</span>
-              {activeTab === 'about' ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
+              {activeTab === "about" ? (
+                <FaChevronUp className="text-gray-400" />
+              ) : (
+                <FaChevronDown className="text-gray-400" />
+              )}
             </button>
-            {activeTab === 'about' && (
+            {activeTab === "about" && (
               <div className="pb-4 animate-fadeIn">
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                  Full-stack developer specializing in creating high-converting websites 
-                  with Shopify, WordPress, and Next.js.
+                  Full-stack developer specializing in creating high-converting
+                  websites with Shopify, WordPress, and Next.js.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  <a
+                    href="https://www.youtube.com/@thecodewithimtiaz"
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    target="_blank"
+                  >
+                    <FaYoutube className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://github.com/Imtiazh346/codewithimtiaz"
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    target="_blank"
+                  >
                     <FaGithub className="w-5 h-5" />
                   </a>
-                  <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  <a
+                    href="https://www.linkedin.com/in/dev-imtiaz/"
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    target="_blank"
+                  >
                     <FaLinkedin className="w-5 h-5" />
                   </a>
-                  <a href="https://twitter.com" className="text-gray-400 hover:text-white transition-colors duration-300">
-                    <FaTwitter className="w-5 h-5" />
-                  </a>
-                  <a href="https://instagram.com" className="text-gray-400 hover:text-white transition-colors duration-300">
+                  <a
+                    href="https://www.instagram.com/code_with_imtiaz/"
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    target="_blank"
+                  >
                     <FaInstagram className="w-5 h-5" />
                   </a>
-                  <a href="mailto:hello@example.com" className="text-gray-400 hover:text-white transition-colors duration-300">
-                    <FaEnvelope className="w-5 h-5" />
-                  </a>
+                  <a
+                    href="https://www.facebook.com/codingwithimtiaz/"
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                    target="_blank"
+                  >
+                    <FaFacebook className="w-5 h-5" />
+                  </a>{" "}
                 </div>
               </div>
             )}
@@ -178,18 +229,22 @@ const Footer = () => {
           {/* Services Tab */}
           <div className="border-b border-gray-700">
             <button
-              onClick={() => toggleTab('services')}
+              onClick={() => toggleTab("services")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
             >
               <span className="font-semibold">Services</span>
-              {activeTab === 'services' ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
+              {activeTab === "services" ? (
+                <FaChevronUp className="text-gray-400" />
+              ) : (
+                <FaChevronDown className="text-gray-400" />
+              )}
             </button>
-            {activeTab === 'services' && (
+            {activeTab === "services" && (
               <div className="pb-4 animate-fadeIn">
                 <ul className="space-y-2">
                   {services.map((service, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link
                         href={service.href}
                         className="text-gray-300 hover:text-white text-sm transition-colors duration-300 block py-1"
                       >
@@ -205,18 +260,22 @@ const Footer = () => {
           {/* Quick Links Tab */}
           <div className="border-b border-gray-700">
             <button
-              onClick={() => toggleTab('links')}
+              onClick={() => toggleTab("links")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
             >
               <span className="font-semibold">Quick Links</span>
-              {activeTab === 'links' ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
+              {activeTab === "links" ? (
+                <FaChevronUp className="text-gray-400" />
+              ) : (
+                <FaChevronDown className="text-gray-400" />
+              )}
             </button>
-            {activeTab === 'links' && (
+            {activeTab === "links" && (
               <div className="pb-4 animate-fadeIn">
                 <ul className="space-y-2">
                   {usefulLinks.map((link, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link
                         href={link.href}
                         className="text-gray-300 hover:text-white text-sm transition-colors duration-300 block py-1"
                       >
@@ -232,18 +291,22 @@ const Footer = () => {
           {/* Latest Posts Tab */}
           <div className="border-b border-gray-700">
             <button
-              onClick={() => toggleTab('posts')}
+              onClick={() => toggleTab("posts")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
             >
               <span className="font-semibold">Latest Posts</span>
-              {activeTab === 'posts' ? <FaChevronUp className="text-gray-400" /> : <FaChevronDown className="text-gray-400" />}
+              {activeTab === "posts" ? (
+                <FaChevronUp className="text-gray-400" />
+              ) : (
+                <FaChevronDown className="text-gray-400" />
+              )}
             </button>
-            {activeTab === 'posts' && (
+            {activeTab === "posts" && (
               <div className="pb-4 animate-fadeIn">
                 <ul className="space-y-2">
                   {latestPosts.map((post, index) => (
                     <li key={index}>
-                      <Link 
+                      <Link
                         href={post.href}
                         className="text-gray-300 hover:text-white text-sm transition-colors duration-300 block py-1 leading-tight"
                       >
@@ -275,8 +338,14 @@ const Footer = () => {
       {/* Add custom animation */}
       <style jsx>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(-10px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-out;
