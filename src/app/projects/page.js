@@ -59,7 +59,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-gray-300 to-gray-200 text-gray-800 py-16 px-6 text-center">
+      <div className="bg-gradient-to-r from-gray-200 to-purple-00 text-gray-800 py-16 px-6 text-center">
         <h1 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h1>
         <p className="text-base md:text-xl max-w-2xl mx-auto">
           A collection of projects I've built across multiple platforms. Click
