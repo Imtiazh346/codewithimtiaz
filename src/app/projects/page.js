@@ -5,35 +5,43 @@ import Link from "next/link";
 const projectData = [
   {
     id: 1,
-    title: "Firmenity Shopify Store",
+    title: "Reana.pk",
     category: "Shopify",
-    description: "Luxury men's clothing eCommerce store.",
-    url: "#",
-    image: "/projects/shopify1.jpg",
+    description: "Pakistani store for cosmetics & wellness.",
+    url: "https://reana.pk/",
+    image: "/assets/images/projects/reanapk.png",
   },
   {
     id: 2,
     title: "Musysic",
     category: "Shopify",
-    description: "Education management platform with UI/UX designs.",
-    url: "#",
-    image: "/projects/nextjs1.jpg",
+    description: "USA-based store for musical instruments.",
+    url: "https://www.musysic.com/",
+    image: "/assets/images/projects/musysic.png",
   },
   {
     id: 3,
     title: "Leads.edu.pk",
     category: "WordPress",
-    description: "Corporate website with responsive design.",
-    url: "#",
-    image: "/projects/wordpress1.jpg",
+    description: "Educational institute website.",
+    url: "https://leads.edu.pk/",
+    image: "/assets/images/projects/leads.png",
   },
-    {
+  {
     id: 4,
-    title: "Portfolio",
-    category: "Next.js",
+    title: "Firmenity.com",
+    category: "Shopify",
     description: "Corporate website with responsive design.",
-    url: "#",
-    image: "/projects/wordpress1.jpg",
+    url: "https://firmenity.com/",
+    image: "/assets/images/projects/firmenity.png",
+  },
+  {
+    id: 5,
+    title: "alnasser.pk",
+    category: "Shopify",
+    description: "Corporate website with responsive design.",
+    url: "https://www.alnasser.pk/",
+    image: "/assets/images/projects/alnasser.png",
   },
   // Add more projects here
 ];
@@ -51,11 +59,11 @@ export default function Projects() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-16 px-6 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">My Projects</h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto">
+      <div className="bg-gradient-to-r from-gray-300 to-gray-200 text-gray-800 py-16 px-6 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h1>
+        <p className="text-base md:text-xl max-w-2xl mx-auto">
           A collection of projects I've built across multiple platforms. Click
-          on a project to learn more.
+          on a project to view that project.
         </p>
       </div>
 
