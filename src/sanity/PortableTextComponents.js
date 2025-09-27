@@ -1,8 +1,10 @@
+import { urlFor } from "@/sanity/urlFor";
+
 export const PortableTextComponents = {
   types: {
     image: ({ value }) => (
       <img
-        src={value?.asset?.url}
+        src={urlFor(value).width(800).url()} // generate dynamic image URL
         alt={value.alt || "Blog image"}
         className="rounded-lg my-4"
       />

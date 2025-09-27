@@ -3,9 +3,7 @@ export const allPostsQuery = `*[_type == "post"] | order(publishedAt desc){
   _id,
   title,
   slug,
-  mainImage{
-    asset->{url}
-  },
+  mainImage,
   author->{name, slug},
   categories[]->{_id, title, slug},
   publishedAt
@@ -16,9 +14,7 @@ export const latestPostsQuery = `*[_type == "post"] | order(publishedAt desc)[0.
   _id,
   title,
   slug,
-  mainImage{
-    asset->{url}
-  },
+  mainImage,
   publishedAt
 }`;
 
@@ -35,9 +31,7 @@ export const categoryPostsQuery = `*[_type == "post" && $slug in categories[]->s
   _id,
   title,
   slug,
-  mainImage{
-    asset->{url}
-  },
+  mainImage,
   author->{name},
   publishedAt
 }`;
