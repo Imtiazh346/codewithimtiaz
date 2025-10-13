@@ -56,7 +56,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white px-4 sm:px-6 md:px-8 lg:px-16 py-12">
+    <footer className="bg-slate-900 text-gray-300 px-4 sm:px-6 md:px-8 lg:px-16 py-12">
       {/* Desktop View */}
       <div className="hidden md:block max-w-7xl mx-auto">
         <div className="">
@@ -167,7 +167,7 @@ const Footer = () => {
       <div className="md:hidden">
         <div className="px-4 py-6">
           {/* About Tab - Active by default */}
-          <div className="border-b border-gray-700">
+          <div className="border-b border-slate-700">
             <button
               onClick={() => toggleTab("about")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
@@ -227,7 +227,7 @@ const Footer = () => {
           </div>
 
           {/* Services Tab */}
-          <div className="border-b border-gray-700">
+          <div className="border-b border-slate-700">
             <button
               onClick={() => toggleTab("services")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
@@ -258,7 +258,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links Tab */}
-          <div className="border-b border-gray-700">
+          <div className="border-b border-slate-700">
             <button
               onClick={() => toggleTab("links")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
@@ -289,7 +289,7 @@ const Footer = () => {
           </div>
 
           {/* Latest Posts Tab */}
-          <div className="border-b border-gray-700">
+          <div className="border-b border-slate-700">
             <button
               onClick={() => toggleTab("posts")}
               className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
@@ -322,14 +322,14 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
+      <div className="border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Imtiaz Hussain. All rights reserved.
             </p>
             <p className="text-gray-400 text-sm mt-2 md:mt-0">
-              Code with ❤️ by Imtiaz Hussain
+              Imtiaz Hussain
             </p>
           </div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
@@ -22,28 +23,52 @@ export default function Header() {
     },
   ];
 
+  const handleAnchorClick = (href) => {
+    const targetId = href.substring(1);
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setMobileOpen(false);
+  };
+
+  const closeMobileMenu = () => setMobileOpen(false);
+
   return (
-    <header className="sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 bg-white shadow-md">
+<header className="sticky top-0 z-50 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-r from-slate-900 via-purple-900 to-indigo-900 shadow-xl border-b border-white/10 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
-        {/* Logo */}
-        <Link href="/" className="font-sans text-2xl font-bold text-primary">
-          Code with Imtiaz
+        <Link href="/" className="flex items-center transition-all duration-300 hover:scale-105 hover:opacity-90">
+          <Image
+            src="/assets/logo.png"
+            alt="Code with Imtiaz Logo"
+            width={240}
+            height={120}
+            priority
+            className="h-10 w-auto object-contain rounded-full shadow-md"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'block';
+            }}
+          />
+          <span className="ml-2 hidden font-sans text-xl font-bold text-white drop-shadow-sm">
+            Code with Imtiaz
+          </span>
         </Link>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 items-center text-base">
+        <nav className="hidden md:flex space-x-8 items-center text-sm font-medium">
           {navItems.map((item, idx) =>
             item.children ? (
               <div key={idx} className="group relative">
-                <span className="cursor-pointer text-[#170101] font-semibold text-base">
+                <span className="cursor-pointer text-white font-semibold hover:text-white/90 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm">
                   {item.name}
                 </span>
-                <div className="cursor-pointer font-semibold absolute left-0 top-full bg-white shadow-lg rounded-md opacity-0 group-hover:opacity-100 transition-opacity invisible group-hover:visible w-48">
+                <div className="absolute left-0 top-full mt-2 bg-gradient-to-r from-slate-900 via-purple-900 to-indigo-900 shadow-2xl rounded-xl opacity-0 group-hover:opacity-100 invisible group-hover:visible w-48 border border-white/20 overflow-hidden transition-all duration-300 z-20 backdrop-blur-md">
                   {item.children.map((child, i) => (
                     <Link
                       key={i}
                       href={child.href}
-                      className="block px-4 py-2 hover:bg-gray-100"
+                      className="block px-4 py-3 text-white font-medium hover:bg-white/10 hover:text-white/90 transition-all duration-200"
+                      onClick={closeMobileMenu}
                     >
                       {child.name}
                     </Link>
@@ -53,12 +78,8 @@ export default function Header() {
             ) : item.href.startsWith("#") ? (
               <button
                 key={idx}
-                onClick={() => {
-                  document
-                    .getElementByd(item.href.substring(1))
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="text-[#170101] font-semibold hover:text-primary transition-colors cursor-pointer"
+                onClick={() => handleAnchorClick(item.href)}
+                className="text-white font-semibold hover:text-white/90 transition-all duration-300 px-3 py-2 rounded-lg hover:bg-white/10 backdrop-blur-sm"
               >
                 {item.name}
               </button>
@@ -66,7 +87,8 @@ export default function Header() {
               <Link
                 key={idx}
                 href={item.href}
-                className="text-[#170101] font-semibold px-2 py-2 rounded-md hover:bg-gray-100 transition-colors duration-300 cursor-pointer"
+                className="text-white font-semibold px-3 py-2 rounded-lg hover:bg-white/10 hover:text-white/90 transition-all duration-300 backdrop-blur-sm"
+                onClick={closeMobileMenu}
               >
                 {item.name}
               </Link>
@@ -74,54 +96,64 @@ export default function Header() {
           )}
         </nav>
 
-        {/* Mobile toggle */}
         <button
-          className="md:hidden"
+          className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle mobile menu"
         >
           {mobileOpen ? (
-            <XMarkIcon className="h-6 w-6 text-foreground" />
+            <XMarkIcon className="h-6 w-6 text-white drop-shadow-sm" />
           ) : (
-            <Bars3Icon className="h-6 w-6 text-foreground" />
+            <Bars3Icon className="h-6 w-6 text-white drop-shadow-sm" />
           )}
         </button>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          {navItems.map((item, idx) => (
-            <div
-              key={idx}
-              className="border-b border-gray-200"
-            >
-              {item.children ? (
-                <details>
-                  <summary className="px-6 py-3 cursor-pointer font-semibold text-[#170101]">
+        <div className="md:hidden bg-gradient-to-r from-slate-900 via-purple-900 to-indigo-900 shadow-2xl border-t border-white/20 overflow-hidden backdrop-blur-md">
+          <div className="max-h-96 overflow-y-auto">
+            {navItems.map((item, idx) => (
+              <div key={idx} className="border-b border-white/20 last:border-b-0">
+                {item.children ? (
+                  <details className="open:bg-white/5">
+                    <summary className="px-6 py-4 cursor-pointer font-semibold text-white hover:text-white/90 hover:bg-white/10 transition-all duration-200 list-none">
+                      {item.name}
+                      <span className="float-right transition-transform duration-300 rotate-0 open:rotate-180">
+                        ▼
+                      </span>
+                    </summary>
+                    <div className="pl-2 pb-2 bg-white/5">
+                      {item.children.map((child, i) => (
+                        <Link
+                          key={i}
+                          href={child.href}
+                          className="block px-4 py-3 text-white/90 font-medium hover:text-white hover:bg-white/10 transition-all duration-200"
+                          onClick={closeMobileMenu}
+                        >
+                          {child.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ) : item.href.startsWith("#") ? (
+                  <button
+                    onClick={() => handleAnchorClick(item.href)}
+                    className="block w-full text-left px-6 py-4 text-white font-semibold hover:text-white/90 hover:bg-white/10 transition-all duration-200"
+                  >
                     {item.name}
-                  </summary>
-                  <div className="pl-4 pb-2">
-                    {item.children.map((child, i) => (
-                      <Link
-                        key={i}
-                        href={child.href}
-                        className="block px-2 py-2 text-foreground hover:text-primary"
-                      >
-                        {child.name}
-                      </Link>
-                    ))}
-                  </div>
-                </details>
-              ) : (
-                <Link
-                  href={item.href}
-                  className="block px-6 py-3 text-[#170101] font-semibold hover:text-primary"
-                >
-                  {item.name}
-                </Link>
-              )}
-            </div>
-          ))}
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block px-6 py-4 text-white font-semibold hover:text-white/90 hover:bg-white/10 transition-all duration-200"
+                    onClick={closeMobileMenu}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </header>
