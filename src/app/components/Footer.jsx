@@ -56,7 +56,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 text-gray-300 px-4 sm:px-6 md:px-8 lg:px-16 py-12">
+    <footer className="bg-black text-gray-300 px-4 sm:px-6 md:px-8 lg:px-16 py-12">
       {/* Desktop View */}
       <div className="hidden md:block max-w-7xl mx-auto">
         <div className="">

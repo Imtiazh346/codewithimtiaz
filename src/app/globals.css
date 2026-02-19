@@ -3,10 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #333333;
-  --primary: #673de6;
+  --primary: #a3e635;
   --heading: #2f1c6a;
   --btnbg: #020106;
   --font-sans: 'Inter', 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-syne: 'Syne', 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
 }
 

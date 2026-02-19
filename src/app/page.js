@@ -11,7 +11,7 @@ export default function HomePage() {
       <Hero />
       <ProjectsSection />
       <YouTubeGallery />
-      <FeaturedPostsModern />/
+      <FeaturedPostsModern />
       <Newsletter />
     </main>
   );
