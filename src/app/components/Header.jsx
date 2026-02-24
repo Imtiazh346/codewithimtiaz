@@ -45,7 +45,7 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* DESKTOP NAV */}
+        {/* DESKTOP NAVi */}
         <nav className="hidden md:flex items-center gap-9 --font-syne">
           {["Home", "Projects", "Tutorials", "Blogs"].map((item) => (
             <button
