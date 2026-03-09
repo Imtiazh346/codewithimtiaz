@@ -27,11 +27,16 @@ export const categoriesQuery = `*[_type == "category"]{
 }`;
 
 // Posts by category slug
-export const categoryPostsQuery = `*[_type == "post" && $slug in categories[]->slug.current] | order(publishedAt desc){
+export const categoryPostsQuery = `*[_type == "post" && count(categories[@->slug.current == $slug]) > 0] | order(publishedAt desc){
   _id,
   title,
   slug,
-  mainImage,
+  mainImage{
+    asset->{
+      url
+    }
+  },
   author->{name},
+  categories[]->{_id, title, slug},
   publishedAt
 }`;
