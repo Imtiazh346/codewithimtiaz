@@ -8,14 +8,19 @@ export async function generateStaticParams() {
   const categories = await client.fetch(categoriesQuery);
 
   return categories
-    .filter(cat => cat.slug?.current)
-    .map(cat => ({
-      slug: cat.slug.current
-    }));
+    ?.filter((cat) => cat?.slug?.current)
+    ?.map((cat) => ({
+      slug: cat.slug.current,
+    })) || [];
 }
 
 export default async function CategoryPage({ params }) {
-  const { slug } = params;
+  const slug = params?.slug;
+
+  if (!slug) {
+    return null;
+  }
+
   const posts = await client.fetch(categoryPostsQuery, { slug });
 
   const formattedCategory = slug
